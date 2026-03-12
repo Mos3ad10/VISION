@@ -1,0 +1,14 @@
+D:\PythonProject17
+├── Train.py
+├── Val.py
+├── Test.py
+├── export_ncnn.py
+├── pi_live_ncnn.py
+├── dataset.yaml
+├── requirements.txt
+├── task_info.json
+├── runs
+│   └── waled_detect
+│       └── weights
+│           ├── best.pt
+│           └── best_ncnn_model

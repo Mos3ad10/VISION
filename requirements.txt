@@ -1,3 +1,0 @@
-# We use the "headless" version so Docker doesn't look for a screen/GUI
-opencv-contrib-python-headless==4.9.0.80
-numpy

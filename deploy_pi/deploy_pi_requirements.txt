@@ -1,0 +1,15 @@
+# =========================================================
+# Raspberry Pi deployment requirements
+# Covers:
+# - pi_live_ncnn.py
+# - loading best_ncnn_model/
+# =========================================================
+
+# Ultralytics runtime on Raspberry Pi
+ultralytics[export]
+
+# Camera capture and display
+opencv-python
+
+# Needed to load exported NCNN model folders
+ncnn

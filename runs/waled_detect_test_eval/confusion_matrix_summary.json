@@ -1,0 +1,12 @@
+[
+  {
+    "Predicted": "item",
+    "item": 0.91304,
+    "background": 1.0
+  },
+  {
+    "Predicted": "background",
+    "item": 0.08696,
+    "background": 0.0
+  }
+]

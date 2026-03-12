@@ -1,0 +1,26 @@
+# =========================================================
+# Windows / main project requirements
+# Covers:
+# - Train.py
+# - Val.py
+# - Test.py
+# - LiveTest.py
+# - export_ncnn.py
+# =========================================================
+
+# Main YOLO framework
+ultralytics[export]==8.4.21
+
+# Image/video display and camera handling
+opencv-python==4.13.0.92
+
+# Array processing used in inference and drawing utilities
+numpy==2.4.2
+
+# NCNN export/runtime support
+ncnn==1.0.20260114
+pnnx==20260112
+
+# Common helper libraries used by installed stack
+requests==2.32.5
+tqdm==4.67.3

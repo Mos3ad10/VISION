@@ -1,0 +1,7 @@
+{
+  "task": "detect",
+  "run_name": "waled_detect",
+  "class_id": 0,
+  "class_name": "Waled",
+  "weights_name": "best.pt"
+}
