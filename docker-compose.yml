@@ -1,0 +1,16 @@
+services:
+  yolo:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: waled-yolo:latest
+    working_dir: /app
+    environment:
+      DATASET_ROOT: /data
+      RUNS_DIR: /app/runs
+      PYTHONUNBUFFERED: "1"
+    volumes:
+      - ./:/app
+      - D:/DATASET:/data:ro
+    stdin_open: true
+    tty: true

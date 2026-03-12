@@ -1,15 +1,24 @@
-# Use an official Python runtime as a parent image
-FROM python:3.10-slim
+FROM python:3.12-slim
 
-# Set the working directory in the container
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+ENV DATASET_ROOT=/data
+ENV RUNS_DIR=/app/runs
+
 WORKDIR /app
 
-# Copy the requirements file and install dependencies
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    libgl1 \
+    libglib2.0-0 \
+    ffmpeg \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
 
-# Copy the rest of your project code into the container
-COPY . .
+COPY requirements.txt /app/requirements.txt
 
-# Run the training script first, then the testing script
-CMD python Train.py && python Test.py
+RUN python -m pip install --upgrade pip setuptools wheel && \
+    python -m pip install -r /app/requirements.txt
+
+COPY . /app
+
+CMD ["python", "Train.py"]
