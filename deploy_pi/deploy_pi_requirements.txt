@@ -1,15 +1,12 @@
-# =========================================================
-# Raspberry Pi deployment requirements
-# Covers:
-# - pi_live_ncnn.py
-# - loading best_ncnn_model/
-# =========================================================
+# Ultralytics:
+# Loads the exported YOLO model through the Ultralytics Python API
+# and runs prediction from pi_live_ncnn.py
+ultralytics
 
-# Ultralytics runtime on Raspberry Pi
-ultralytics[export]
-
-# Camera capture and display
+# OpenCV:
+# Handles camera input, drawing bounding boxes/text, and showing the live window
 opencv-python
 
-# Needed to load exported NCNN model folders
+# NCNN:
+# Runs the exported best_ncnn_model on Raspberry Pi efficiently
 ncnn
